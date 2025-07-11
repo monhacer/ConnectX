@@ -120,7 +120,7 @@ crl_signing_key' > ca.tmpl
     if [[ -z "$ip" ]]; then
         echo -e "${Error} get WAN IP failed !"
         read -e -p "Please manully input your WAN IP:" ip
-        [[ -z "${ip}" ]] && echo "取消..." && over
+        [[ -z "${ip}" ]] && echo "Cancel..." && over
     fi
     echo -e 'cn = "'${ip}'"
 organization = "'${lalala}'"
@@ -402,7 +402,7 @@ View_Config(){
     Read_config
     clear && echo "===================================================" && echo
     echo -e " AnyConnect Conf：" && echo
-    echo -e " I  P\t\t  : ${Green_font_prefix}${ip}${Font_color_suffix}"
+    echo -e " IP\t\t  : ${Green_font_prefix}${ip}${Font_color_suffix}"
     echo -e " TCP Port\t  : ${Green_font_prefix}${tcp_port}${Font_color_suffix}"
     echo -e " UDP Port\t  : ${Green_font_prefix}${udp_port}${Font_color_suffix}"
     echo -e " Single user device limit : ${Green_font_prefix}${max_same_clients}${Font_color_suffix}"
@@ -515,7 +515,7 @@ Update_Shell(){
 check_sys
 [[ ${release} != "debian" ]] && [[ ${release} != "ubuntu" ]] && echo -e "${Error} OS is not supported ${release} !" && exit 1
 echo && echo -e " ConnectX ${Green_font_prefix}[v${sh_ver}]${Font_color_suffix}
-https://github.com/monhacer/ConnectX
+ https://github.com/monhacer/ConnectX
   
  ${Green_font_prefix}0.${Font_color_suffix} Upgrade Script (DO NOT UPDATE)
 ————————————
