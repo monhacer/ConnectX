@@ -236,7 +236,7 @@ Set_username(){
 }
 Set_passwd(){
     echo "Please input the password of VPN account"
-    read -e -p "(默认: doub.io):" userpass
+    read -e -p "(default: doub.io):" userpass
     [[ -z "${userpass}" ]] && userpass="password"
     echo && echo -e "   Password : ${Red_font_prefix}${userpass}${Font_color_suffix}" && echo
 }
